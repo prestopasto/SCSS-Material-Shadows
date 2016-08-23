@@ -1,0 +1,26 @@
+{
+  "name": "scss-material-shadows",
+  "description": "SCSS Library to implement Material Design Shadows",
+  "main": "./src/md-material-shadows.scss",
+  "authors": [
+    "Preston Griffith"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "Material",
+    "Design",
+    "Elevation",
+    "Shadows",
+    "box-shadow",
+    "SCSS",
+    "SASS"
+  ],
+  "homepage": "https://github.com/prestopasto/SCSS-Material-Shadows",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

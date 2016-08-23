@@ -216,7 +216,7 @@ $materialElements: (
 
 
 /**
-* Generate CSS md-elevation-z# classes
+* CSS md-elevation-z# classes
 */
 @for $zValue from 0 through 24 {
   .md-elevation-z#{$zValue} {
@@ -225,7 +225,7 @@ $materialElements: (
 }
 
 /**
-* Generate default CSS transistion class
+* CSS transistion class
 */
 md-elevation-transition {
 	transition: box-shadow 280ms cubic-bezier(.4, 0, .2, 1);
@@ -233,7 +233,7 @@ md-elevation-transition {
 
 
 /**
-* Generate CSS classes for Material Design elements
+* CSS classes for Material Design elements
 */
 @each $element, $attr in $materialElements {
   .md-elevation-#{$element} {
