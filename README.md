@@ -1,4 +1,4 @@
-# SCSSS-Material-Shadows
+# SCSS-Material-Shadows
 SCSS Library to implement Material Design Shadows
 Can be used through either SCSS mixins or CSS classes
 
