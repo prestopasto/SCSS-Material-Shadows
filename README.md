@@ -7,6 +7,11 @@ While reading the [Angular Material 2 design docs on elevation](https://docs.goo
 
 All I have done is replaced Scott's Javascript logic with SCSS functions, and added a few helper functions to make it easier to include in other projects.
 
+## Installation
+```SCSS
+bower install scss-material-shadows --save-dev
+```
+
 ## Demo
 [Demo](http://codepen.io/prestopasto/pen/oLmgqm?editors=1100) on CodePen.  This is my SCSS rewrite of the [Material Shadow Interpolator](http://codepen.io/shyndman/pen/ojxmdY).
 
@@ -99,7 +104,7 @@ To use one of these predefined elements use the mdElementElevation mixin:
 
 
 ## CSS
-Along with the SCSS mixins, the SCSS file will generate static CSS classes that can be used in your HTML markup.  Currently there is no CSS file provided for download.
+Along with the SCSS mixins, the SCSS file will generate static CSS classes that can be used in your HTML markup.  The CSS file provided for download in the /css folder.
 
 ### CSS Elevation
 Like the mdElevation mixin above you have the choice of specifying a elevation value or an element
@@ -122,7 +127,15 @@ The above $materialElements list is also available in CSS classes
 </div>
 ```
 ```HTML
-<div class="fab md-elevation-fab">
+<div class="fab md-elevation-fab">  
 </div>
 ```
 md-elevation-transition is available to apply a transition to the box-shadow property.  Please note however that it is currently fixed at a 280ms duration and that to use this you will need some way of applying a different md-elevation-* class on the element to trigger a change.
+
+## TODO
+* Change mdElevationTransition() to detect units of ms and use directly as the duration.  If unitless it would be treated as a delta elevation change.
+* Inlcude multiple duration options for the css class .md-elevation-transition
+
+## References
+[Material Design - Elevation and Shadows](https://material.google.com/material-design/elevation-shadows.html)
+[Material Shadow Interpolator](http://codepen.io/shyndman/pen/ojxmdY)
