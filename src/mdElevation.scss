@@ -79,25 +79,25 @@ $MAX_ANIMATION_LENGTH: 400ms;
  * Source: https://material.google.com/material-design/elevation-shadows.html#elevation-shadows-elevation-android
  */
 $materialElements: (
-  (dialog 24),
-  (picker 24),
-  (nav-drawer 16),
-  (right-drawer 16),
-  (bottom-sheet 16),
-  (fab 6 12 active),
-  (sub-menu-3 11),
-  (sub-menu-2 10),
-  (sub-menu-1 9),
-  (menu 8),
-  (bottom-nav-bar 8),
-  (card 2 8 hover),
-  (raised-button 2 8 active),
-  (snackbar 6),
-  (app-bar 4),
-  (refresh-indicator 3),
-  (quick-entry 2 3 active),
-  (search-bar 2 3 active),
-  (switch 1)
+  dialog: (24),
+  picker: (24),
+  nav-drawer: (16),
+  right-drawer: 16,
+  bottom-sheet: 16,
+  fab: 6 12 active,
+  sub-menu-3: 11,
+  sub-menu-2: 10,
+  sub-menu-1: 9,
+  menu: 8,
+  bottom-nav-bar: 8,
+  card: 2 8 hover,
+  raised-button: 2 8 active,
+  snackbar: 6,
+  app-bar: 4,
+  refresh-indicator: 3,
+  quick-entry: 2 3 active,
+  search-bar: 2 3 active,
+  switch: 1
 );
 
 /**
@@ -202,6 +202,17 @@ $materialElements: (
   transition: box-shadow $duration $easing;
 }
 
+/**
+* Returns box-shadow and transition properties for Material Design elements
+*/
+@mixin mdElementElevation($elementName) {
+  $attr: map-get($materialElements, $elementName);
+    @if length($attr) == 1 {
+      @include mdElevation(nth($attr, 1));
+    } @else {
+      @include mdElevation(nth($attr, 1), nth($attr, 2), nth($attr, 3));
+    }
+}
 
 
 /**
@@ -213,16 +224,23 @@ $materialElements: (
   }
 }
 
+/**
+* Generate default CSS transistion class
+*/
+md-elevation-transition {
+	transition: box-shadow 280ms cubic-bezier(.4, 0, .2, 1);
+}
+
 
 /**
 * Generate CSS classes for Material Design elements
 */
-@each $element in $materialElements {
-  .md-elevation-#{nth($element, 1)} {
-    @if length($element) == 2 {
-      @include mdElevation(nth($element, 2));
+@each $element, $attr in $materialElements {
+  .md-elevation-#{$element} {
+    @if length($attr) == 1 {
+      @include mdElevation(nth($attr, 1));
     } @else {
-      @include mdElevation(nth($element, 2), nth($element, 3), nth($element, 4));
+      @include mdElevation(nth($attr, 1), nth($attr, 2), nth($attr, 3));
     }
   }
 }
