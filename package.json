@@ -1,0 +1,34 @@
+{
+  "name": "scss-material-shadows",
+  "version": "0.1.0",
+  "description": "SCSS Library to implement Material Design Shadows",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/prestopasto/SCSS-Material-Shadows.git"
+  },
+  "keywords": [
+    "Material",
+    "Design",
+    "Elevation",
+    "Shadows",
+    "box-shadow",
+    "SCSS",
+    "SASS"
+  ],
+  "author": "Preston Griffith",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/prestopasto/SCSS-Material-Shadows/issues"
+  },
+  "homepage": "https://github.com/prestopasto/SCSS-Material-Shadows",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-sass": "^2.3.2"
+  }
+}
