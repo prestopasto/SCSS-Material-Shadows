@@ -12,8 +12,11 @@ All I have done is replaced Scott's Javascript logic with SCSS functions, and ad
 
 ## SCSS Mixins
 Primary use is through a mixin called mdElevation()
-mdElevation accepts 3 parameters, $elevation1, $elevation2, and a $state property to change from one to the other
+
+mdElevation accepts 3 parameters, $elevation1, $elevation2, and a $state property to change from one to the other.
+
 mdElevation($elevation1, $elevation2, $state);
+
 $elevation2 and $state are optional, but must be used together
 
 ### Examples of use:
@@ -21,6 +24,7 @@ $elevation2 and $state are optional, but must be used together
 #### Custom Elements
 ##### Static Elements
 Specify the elevation of the element
+
 The mdElevation($elevation) mixin takes an elevation from 0dp to 24dp
 ```SCSS
 .my-panel {
@@ -30,7 +34,9 @@ The mdElevation($elevation) mixin takes an elevation from 0dp to 24dp
 
 ##### Elements That Change Elevation
 * Long form
+
 You can use selectors to change the elevation of an element.
+
 When an element changes elevation use the mdElevationTransition($deltaElevation) mixin to animate the change.  Pass in the change in elevation and mdElevationTransition($deltaElevation) will change the animation duration.  Smaller changes are quicker than longer changes.
 ```SCSS
 .my-card {
@@ -43,6 +49,7 @@ When an element changes elevation use the mdElevationTransition($deltaElevation)
 ```
 
 * Short form
+
 The below code will product the same output as the code above.  I have tested 'hover' and 'active' states to trigger a change.  If there is a use case I didn't account for please contact me.
 ```SCSS
 .my-card {
@@ -98,6 +105,7 @@ Along with the SCSS mixins, the SCSS file will generate static CSS classes that 
 Like the mdElevation mixin above you have the choice of specifying a elevation value or an element
 
 Elevation values follow the form:
+
 md-elevation-z#, with # from 0 to 24
 ```HTML
 <div class="card md-elevation-z2">
@@ -108,7 +116,7 @@ md-elevation-z#, with # from 0 to 24
 </div>
 ```
 
-The above Material Elements list is also available in CSS classes
+The above $materialElements list is also available in CSS classes
 ```HTML
 <div class="menu md-elevation-menu">
 </div>
@@ -117,4 +125,4 @@ The above Material Elements list is also available in CSS classes
 <div class="fab md-elevation-fab">
 </div>
 ```
-md-elevation-transition is also available and will apply the transition to the box-shadow property.  Please note however that it is currently fixed at a 280ms duration and that to use this you will need some way of applying a different md-elevation-* class on the element to trigger a change.
+md-elevation-transition is available to apply a transition to the box-shadow property.  Please note however that it is currently fixed at a 280ms duration and that to use this you will need some way of applying a different md-elevation-* class on the element to trigger a change.
