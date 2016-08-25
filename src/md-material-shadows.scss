@@ -198,7 +198,7 @@ $materialElements: (
  * The larger the elevation change the longer the animation takes
  */
 @mixin mdElevationTransition($elevationChange: 6, $easing: cubic-bezier(.4, 0, .2, 1)) {
-  $duration: lerp($elevationChange/24, $MIN_ANIMATION_LENGTH, $MAX_ANIMATION_LENGTH)+ms;
+  $duration: lerp($elevationChange/24, $MIN_ANIMATION_LENGTH, $MAX_ANIMATION_LENGTH);
   transition: box-shadow $duration $easing;
 }
 
