@@ -89,16 +89,16 @@ $materialElements: (
 );
 ```
 
-To use one of these predefined elements use the mdElementElevation mixin:
+To use one of these predefined elements use the mdElevationElement mixin:
 ```SCSS
 .my-card {
-  @include mdElementElevation('card');  // Includes :hover state and elevation change from 2dp to 8dp
+  @include mdElevationElement('card');  // Includes :hover state and elevation change from 2dp to 8dp
 }
 ```
 
 ```SCSS
 .dialog {
-  @include mdElementElevation('dialog');  // Is a static 24dp high
+  @include mdElevationElement('dialog');  // Is a static 24dp high
 }
 ```
 
