@@ -205,7 +205,7 @@ $materialElements: (
 /**
 * Returns box-shadow and transition properties for Material Design elements
 */
-@mixin mdElementElevation($elementName) {
+@mixin mdElevationElement($elementName) {
   $attr: map-get($materialElements, $elementName);
     @if length($attr) == 1 {
       @include mdElevation(nth($attr, 1));
