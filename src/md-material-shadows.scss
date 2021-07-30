@@ -156,7 +156,7 @@ $materialElements: (
   $bounds: findBoundingShadowSets($elevation);
   $min: nth($bounds, 1);
   $max: nth($bounds, 2);
-  $x: ($elevation - map-get($min, "elevation")) / (map-get($max, "elevation") - map-get($min, "elevation"));
+  $x: math.div($elevation - map-get($min, "elevation"), map-get($max, "elevation") - map-get($min, "elevation"));
   $elevationShadows: ();
   @for $i from 1 to length(map-get($min, "shadows")) + 1 {
     $newShadow: lerpShadow($x, nth(map-get($min, "shadows"), $i), nth(map-get($max, "shadows"), $i));
@@ -198,7 +198,7 @@ $materialElements: (
  * The larger the elevation change the longer the animation takes
  */
 @mixin mdElevationTransition($elevationChange: 6, $easing: cubic-bezier(.4, 0, .2, 1)) {
-  $duration: lerp($elevationChange/24, $MIN_ANIMATION_LENGTH, $MAX_ANIMATION_LENGTH);
+  $duration: lerp(math.div($elevationChange, 24), $MIN_ANIMATION_LENGTH, $MAX_ANIMATION_LENGTH);
   transition: box-shadow $duration $easing;
 }
 
