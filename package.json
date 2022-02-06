@@ -1,6 +1,6 @@
 {
-  "name": "scss-material-shadows",
-  "version": "0.1.0",
+  "name": "@gecka/scss-material-shadows",
+  "version": "0.1.2-gecka2",
   "description": "SCSS Library to implement Material Design Shadows",
   "directories": {
     "doc": "docs"
