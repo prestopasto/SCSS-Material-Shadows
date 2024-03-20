@@ -183,7 +183,7 @@ $materialElements: (
   }
 
   @if $elevation2 != null {
-     @include mdElevationTransition($elevation2 -$elevation2);
+     @include mdElevationTransition($elevation2 - $elevation2);
     &:#{$state} {
       @if $elevation1==0 {
         box-shadow: none !important;
