@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/prestopasto/SCSS-Material-Shadows.git"
+    "url": "https://github.com/Gecka-Apps/SCSS-Material-Shadows.git"
   },
   "keywords": [
     "Material",
@@ -24,9 +24,9 @@
   "author": "Preston Griffith",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/prestopasto/SCSS-Material-Shadows/issues"
+    "url": "https://github.com/Gecka-Apps/SCSS-Material-Shadows/issues"
   },
-  "homepage": "https://github.com/prestopasto/SCSS-Material-Shadows",
+  "homepage": "https://github.com/Gecka-Apps/SCSS-Material-Shadows",
   "devDependencies": {
     "gulp": "^3.9.1",
     "gulp-sass": "^2.3.2"
