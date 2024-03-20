@@ -4,6 +4,8 @@
 // Found from Angular Material 2 notes here:
 // https://docs.google.com/document/d/1W3NGSLqDZzjbBBLW2C6y_6NUxtvdZAVaJvg58LY3Q0E/preview#
 
+@use 'sass:math';
+
 /**
  * Shadow colors.
  * http://codepen.io/shyndman/pen/ojxmdY
@@ -156,7 +158,7 @@ $materialElements: (
   $bounds: findBoundingShadowSets($elevation);
   $min: nth($bounds, 1);
   $max: nth($bounds, 2);
-  $x: ($elevation - map-get($min, "elevation")) / (map-get($max, "elevation") - map-get($min, "elevation"));
+  $x: math.div($elevation - map-get($min, "elevation"), map-get($max, "elevation") - map-get($min, "elevation"));
   $elevationShadows: ();
   @for $i from 1 to length(map-get($min, "shadows")) + 1 {
     $newShadow: lerpShadow($x, nth(map-get($min, "shadows"), $i), nth(map-get($max, "shadows"), $i));
@@ -181,7 +183,7 @@ $materialElements: (
   }
 
   @if $elevation2 != null {
-     @include mdElevationTransition($elevation2 -$elevation2);
+     @include mdElevationTransition($elevation2 - $elevation2);
     &:#{$state} {
       @if $elevation1==0 {
         box-shadow: none !important;
@@ -198,7 +200,7 @@ $materialElements: (
  * The larger the elevation change the longer the animation takes
  */
 @mixin mdElevationTransition($elevationChange: 6, $easing: cubic-bezier(.4, 0, .2, 1)) {
-  $duration: lerp($elevationChange/24, $MIN_ANIMATION_LENGTH, $MAX_ANIMATION_LENGTH);
+  $duration: lerp(math.div($elevationChange, 24), $MIN_ANIMATION_LENGTH, $MAX_ANIMATION_LENGTH);
   transition: box-shadow $duration $easing;
 }
 

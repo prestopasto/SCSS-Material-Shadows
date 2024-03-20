@@ -1,6 +1,7 @@
 {
-  "name": "scss-material-shadows",
-  "version": "0.1.0",
+  "name": "@gecka/scss-material-shadows",
+  "version": "0.1.3",
+  "type": "module",
   "description": "SCSS Library to implement Material Design Shadows",
   "directories": {
     "doc": "docs"
@@ -10,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/prestopasto/SCSS-Material-Shadows.git"
+    "url": "https://github.com/Gecka-Apps/SCSS-Material-Shadows.git"
   },
   "keywords": [
     "Material",
@@ -22,13 +23,21 @@
     "SASS"
   ],
   "author": "Preston Griffith",
+  "contributors": [
+    {
+      "name": "Laurent Dinclaux",
+      "email": "laurent@gecka.nc",
+      "url": "http://gecka.nc/"
+    }
+  ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/prestopasto/SCSS-Material-Shadows/issues"
+    "url": "https://github.com/Gecka-Apps/SCSS-Material-Shadows/issues"
   },
-  "homepage": "https://github.com/prestopasto/SCSS-Material-Shadows",
+  "homepage": "https://github.com/Gecka-Apps/SCSS-Material-Shadows",
   "devDependencies": {
-    "gulp": "^3.9.1",
-    "gulp-sass": "^2.3.2"
+    "gulp": "^4.0.2",
+    "gulp-sass": "^5.1.0",
+    "sass": "^1.72.0"
   }
 }

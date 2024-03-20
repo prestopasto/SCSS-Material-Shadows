@@ -1,0 +1,26 @@
+node_modules/
+test/
+tests/
+bower_components/
+
+# Was not included in original version we forked from
+/package-lock.json
+
+# OS generated files #
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDE
+/nbproject
+/.project
+/.settings
+/.buildpath
+/.idea
+/.fleet
+
+
